@@ -27,7 +27,12 @@ module.exports = () => ({
   devServer: {
     historyApiFallback: true,
     host: '0.0.0.0',
-    allowedHosts: 'all'
+    allowedHosts: 'all',
+    headers: [
+      {
+        key: 'Access-Control-Allow-Origin',
+        value: '*',
+      }],
   },
   module: {
     rules: [
